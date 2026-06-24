@@ -33,13 +33,13 @@ This gives you immediate access to CoCo without any local installation.
 <!-- ------------------------ -->
 ## Lab Setup
 
-Before starting the demos, run the setup scripts to create the workshop environment and load sample data. These files are in the `assets/` folder of [this repo](https://github.com/hindcraig3/cortex-code-foundations/assets).
+Before starting the demos, run the setup scripts to create the workshop environment and load sample data. These files are in the `assets/` folder of [this repo](https://github.com/hindcraig3/cortex-code-foundations/tree/main/assets).
 
 ### Step 1: Create the Workshop Environment
 
-1. Copy the SQL from the [00_snowday_setup.sql](https://github.com/hindcraig3/cortex-code-foundations/assets/00_snowday_setup.sql) file
+1. Copy the SQL from the [00_snowday_setup.sql](https://github.com/hindcraig3/cortex-code-foundations/blob/main/assets/00_snowday_setup.sql) file
 2. Open Workspaces in Snowsight ( via the Projects --> Workspaces menu)
-3.Add a new SQL File
+3. Add a new SQL File
 4. Paste the SQL into the new file. 
 5. Select "Run All" to run all the statements. This creates:
 - `COCO_WORKSHOP` database
@@ -49,7 +49,7 @@ Before starting the demos, run the setup scripts to create the workshop environm
 
 ### Step 2: Load Sample Data
 
-1. Copy the SQL from the [00_sample_data.sql](https://github.com/hindcraig3/cortex-code-foundations/assets/00_sample_data.sql) file
+1. Copy the SQL from the [00_sample_data.sql](https://github.com/hindcraig3/cortex-code-foundations/blob/main/assets/00_sample_data.sql) file
 2. Add a new SQL File into your Workspace
 3. Paste the SQL into the new file. 
 4. Select "Run All" to run all the statements. This creates and populates:

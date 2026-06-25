@@ -1,4 +1,4 @@
-# Cortex Code Foundations
+# Snowflake CoCo Foundations
 <!-- ------------------------ -->
 ## Overview
 
@@ -7,10 +7,10 @@ Cortex Code (CoCo) is Snowflake's AI coding agent built to accelerate data and A
 This guide walks you through completing a hands-on workshop covering three real-world scenarios: building a Dynamic Table pipeline, maintaining and evolving it, and creating a Cortex Agent with a semantic view.
 
 ### Prerequisites
-- A Snowflake account with Cortex Code enabled
+- A Snowflake account with CoCo enabled
 
 ### What You'll Learn
-- How to access Cortex Code via Snowsight (UI)
+- How to access CoCo via Snowsight (UI)
 - How to build a Dynamic Table pipeline with CoCo
 - How to maintain a pipeline 
 - How to create a Cortex Agent with a semantic view and evaluate its performance
@@ -20,11 +20,11 @@ This guide walks you through completing a hands-on workshop covering three real-
 - A Cortex Agent grounded on a semantic view, with an evaluation framework
 
 <!-- ------------------------ -->
-## Access Cortex Code in Snowsight
+## Access CoCo in Snowsight
 
-You will access Cortex Code directly from the Snowflake UI.
+You will access CoCo directly from the Snowflake UI.
 
-In Snowsight, click the **blue star icon** in the bottom right corner to open the Cortex Code panel.
+In Snowsight, click the **blue star icon** in the bottom right corner to open the CoCo panel.
 
 ![Snowsight Home with CoCo Button](assets/snowsight_home_coco_button.png)
 
@@ -132,22 +132,24 @@ COCO_WORKSHOP.SOURCE_DATA.BRONZE_ORACLE_AP_INVOICES.
 
 **1.3.3 - Get CoCo to build the plan**
 
-1. Toggle Plan Mode to **off**. 
+1. Toggle **Plan Mode** to **off**. 
 2. Type the following prompt and to tell CoCo to proceed with building the dynamic table:
 
 ```
 Proceed with the plan. Create a new SQL file in the workspace with all the code.
 ```
 
-> **What to look for:** CoCo will create the SQL required to implement the dynamic table. It should create a new file in your workspace. 
+> **What to look for:** CoCo will create the SQL required to implement the dynamic table. It should also create a new file in your workspace containinig the SQL statements. 
 
-**1.3.4 - Run the SQL to create the dynamic table**
+**1.3.4 - Review the SQL file that CoCo generated**
 
-1. Once the code has been generated and you have reviewed it select **"Run All"** in the worksheet  to build the dynamic table. 
+1. Once the code has been generated you can review it. Click the **Keep All** button to retain the changes made by CoCo.
+
+>**NOTE:** CoCo should deploy the dynamic table in the previous step. If it did not you can run all the SQL statements in the SQL file using the "Run All" command.
 
 ### Step 1.4 – Explore the dynamic-table skill
 
-Skills are reusable workflows that tell Cortex Code how to handle a specific Snowflake task. Instead of responding in a completely open-ended way, a skill provides domain context, expected inputs, a defined process, and structured outputs. 
+Skills are reusable workflows that tell CoCo how to handle a specific Snowflake task. Instead of responding in a completely open-ended way, a skill provides domain context, expected inputs, a defined process, and structured outputs. 
 
 1. First, see what skills are available. Ask CoCo the following
 
@@ -197,8 +199,8 @@ A month later, the business sends a set of new requirements for the AP invoices 
 
 ### The new requirements
 
-Download the three CSV files prepared by the Finance Transformation PMO in the `assets/` folder of [this repo](https://github.com/hindcraig3/cortex-code-foundations/cortex-code-foundations/assets). 
-The files are:
+**Download** the three CSV files prepared by the Finance Transformation PMO in the `assets/` folder of [this repo](https://github.com/hindcraig3/cortex-code-foundations/tree/main/assets). 
+The files to download are:
 
 - `sample_business_requirements_source_onboarding.csv` — new source systems (Baan, Workday), owners, priorities, and go-live targets
 - `sample_business_requirements_column_mapping.csv` — field-level mappings for both new sources into the Silver schema
@@ -209,7 +211,7 @@ The files are:
 ### Step 2.1 – Ask CoCo to help you understand the new requirement 
 
 
-1. Upload each file to CoCo. CLick the **+** icon in CoCo and select **upload**. Find the first file you downloaded and upload it.
+1. Upload each file to CoCo. Click the **+** icon in CoCo and select **upload**. Find the first file you downloaded and upload it.
 2. Repeat for the other 2 files. 
 3. Copy the following prompt into CoCo
 
@@ -237,7 +239,7 @@ The files are:
 
 ### Step 2.3 – Apply the Update
 
-1. Use the structured output from the skill to update the Dynamic Table with the following prompt:
+1. Now get CoCO to proceed with implementing the plan. Copy the following prompt into CoCo:
 
     ```
     Proceed with the build. Update the existing SQL file with the changes. Also return:
@@ -248,10 +250,13 @@ The files are:
 
 > **What to look for:** Updated SQL, explainable source mapping, explicit assumptions, and validation queries.
 
-### Step 2.4 – Run the revised SQL to implement the changes
 
-1. Review the changes made to the SQL file and choose to "Keep All"
-2. Run the revised SQL by selecting "Run All" in the worksheet
+### Step 2.4 – Review the changes in the SQL file
+
+1. Once the code changes have been generated you can review them. Click the **Keep All** button to retain the changes made by CoCo.
+
+>**NOTE:** CoCo should deploy the dynamic table changes in the previous step. If it did not you can run all the SQL statements in the SQL file using the "Run All" command
+
 
 At this point you have built a dynamic data pipeline, and then updated it in response to changing business requirements.
 
@@ -331,7 +336,7 @@ Skills can include sub skills that can be used to help verify your code against 
 <!-- ------------------------ -->
 ## Conclusion And Resources
 
-The core pattern is simple: pick one concrete object, ask Cortex Code for one concrete artifact, and keep the result in the project.
+The core pattern is simple: pick one concrete object, ask CoCo for one concrete artifact, and keep the result in the project.
 
 In Demo 1, this was a Dynamic Table to move data from the bronze layer to the silver layer, a small dynamic table runbook, and a single proof query you can rerun after every change. In Demo 2, it was taking new business requirements and turning that into a structured, reviewable change plan. In Demo 3, you saw how skills can be used to design and build new objects ( a semantic view and an Agent) but also help assess code against best practice. 
 

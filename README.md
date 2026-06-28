@@ -106,7 +106,7 @@ For this step we are going to load a dynamic-tables skill into CoCo then get CoC
 
 **1.3.1 - Upload the dynamic-tables skill**
 
-1. Download the [dynamic-tables.zip](https://github.com/hindcraig3/cortex-code-foundations/assets/dynamic-tables.zip) file from the `/assets` folder.
+1. Download the [dynamic-tables.zip](https://github.com/hindcraig3/cortex-code-foundations/blob/main/assets/dynamic-tables.zip) file from the `/assets` folder.
 2. Unzip the dynamic-tables.zip. 
 3. In Snowsight click the **+** icon in CoCo and select **Upload skill folder(s)**
 4. Browse to the location where you unzipped the dynamic-tables.zip file. 

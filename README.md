@@ -139,7 +139,7 @@ COCO_WORKSHOP.SOURCE_DATA.BRONZE_ORACLE_AP_INVOICES.
 Proceed with the plan. Create a new SQL file in the workspace with all the code.
 ```
 
-> **What to look for:** CoCo will create the SQL required to implement the dynamic table. It should also create a new file in your workspace containinig the SQL statements. 
+> **What to look for:** CoCo will create the SQL required to implement the dynamic table. It should also create a new file in your workspace containing the SQL statements. 
 
 **1.3.4 - Review the SQL file that CoCo generated**
 
@@ -306,7 +306,7 @@ Create a semantic view that exposes business-friendly dimensions and measures. T
 
     ```
     Deploy the semantic view and run a validation query against it to verify it is working
-    ``
+    ```
 >**NOTE:** CoCo may ask you to "Approve" saving the semantic view.
 
 ### Step 3.3 – Create a Cortex Agent
@@ -332,6 +332,23 @@ Skills can include sub skills that can be used to help verify your code against 
 
 > **What to look for:** An evaluation of the semantic view against best practices, with concrete suggestions for improving answer quality.
 
+<!-- ------------------------ -->
+## Set Up the Auto-Grader if you want a digital badge ( optional)
+
+If you collect digital badges then you can complete this step to receive a digital badge. 
+
+1. Navigate to : https://northstar.streamlit.app/Auto-Grader
+2. Select the **CoCo Foundations: Getting Started with CoCo** workshop
+3. Enter your Email and Name. **Your email must be the same as the one you used to register**
+4. Click **Generate SQL**
+5. Copy the SQL that is generated
+6. Go back to Workspaces and create a new SQL file.
+7. Paste the SQL into the new SQL file.
+8. Run all the SQL statements using **Run All**
+9. If you have completed each step of the lab correctly you will see a "**Congratulations! You have successfully completed the Cortex Code Foundations workshop!** message. 
+
+And you are done. 
+
 
 <!-- ------------------------ -->
 ## Conclusion And Resources
@@ -351,5 +368,6 @@ In Demo 1, this was a Dynamic Table to move data from the bronze layer to the si
 - [Dynamic Tables Overview](https://docs.snowflake.com/en/user-guide/dynamic-tables-intro)
 - [Cortex Agents Overview](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents)
 - [Cortex Semantic Views Overview](https://docs.snowflake.com/en/user-guide/views-semantic/overview)
+
 
 
